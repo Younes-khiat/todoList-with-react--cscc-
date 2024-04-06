@@ -1,0 +1,39 @@
+body {
+   margin: 0;
+   padding: 0;
+   height: 100vh; 
+}
+ .done {
+    cursor: pointer;
+} 
+h2 {
+    width: 80%;
+}
+.active {
+    background-color: inherit !important;
+    border: #495057 !important;
+}
+.line_through {
+    position: relative; 
+    overflow: hidden;
+}
+.line_through::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    width: 96%;
+    height: 3px;
+    background-color: white; 
+    transform: translateY(-50%);
+    z-index: -1;
+    animation: bar 0.01s linear ;
+}
+@keyframes bar {
+    0% {
+        transform: translateX(-98%);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
